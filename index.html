@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Which Always Sunny Character Are You? Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="page">
+   <h1 id="main"> Always Sunny Fandom</h1> 
+    <img src="gang.webp" id="gang" alt="the gang">
+    <p id="mainSub"> Have you ever wanted to know what member of the gang you are? Well, if this is something you are dying to find out, take the quiz down below!</p>
+    
+    
+
+    
+<br>    
+<br>    
+
+    
+<div id="container">
+<h1 id="heading">Which Always Sunny in Philadelphia Character Are You?</h1>
+    
+<br>    
+
+<h2 id="Q1">1: What food would you like to eat?</h2>
+
+
+    
+<div id="question1">
+<button  id="ch1" type="button">Rum ham</button>
+<button id="ch2" type="button">Milksteak</button>
+<button id="ch3" type="button">Boiled, skinless chicken</button>
+<button id="ch4" type="button">Something fancy to match my exquisite taste, like sea urchin</button>
+<button id="ch5" type="button">A salad, but if no one is looking wings</button>
+    
+<img id="philly" src="philly2.png" alt="philly skyline">    
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+<script>
+
+let total = 0;
+    
+
+let scene2 = function() {
+    $("#ch1").text("Strip club");
+    $("#ch2").text("In the sewers looking for ghouls");
+    $("#ch3").text("At club with lots of dudes or the gym");
+    $("#ch4").text("At a bar picking up chicks");
+    $("#ch5").text("At a comedy club to perform");
+    $("#Q1").text("2: Where would you like to spend your day?");
+    $("#Q1").attr("id", "Q2");
+    //$("#question1").attr("id", "question2");
+    $("button").on("click", scene3);
+
+}
+
+let scene3 = function() {
+    $("#ch1").text("I have money so everyone wants me");
+    $("#ch2").text("There is only 1 person I like, but they don't know they like me back yet");
+    $("#ch3").text("I used to sleep with any woman, now I sleep with any man");
+    $("#ch4").text("I get around, but no one can lock me down");
+    $("#ch5").text("I'm looking for the right person, but all the guys around me are duds");
+    $("#Q2").text("3: What's your dating life like?");
+    $("#Q2").attr("id", "Q3");
+    //$("#question2").attr("id", "question3");
+    $("button").on("click", scene4);
+}
+
+
+let scene4 = function() {
+    $("#ch1").text("Eat cat food and drink beer to sleep");
+    $("#ch2").text("Pretend to have an illness so the one you love notices you");
+    $("#ch3").text("Drive a car into a wall while still inside it");
+    $("#ch4").text("Crack");
+    $("#ch5").text("Hold a funeral for your fake baby so you don't get audited");
+    $("#Q3").text("4: Which of these crazy things would you do?");
+    $("#Q3").attr("id", "Q4");
+   // $("#question2").attr("id", "question3");
+    $("button").on("click", scene5);
+}
+
+
+let scene5 = function() {
+    $("#ch1").text("The one with money");
+    $("#ch2").text("The wildcard");
+    $("#ch3").text("The muscle");
+    $("#ch4").text("The looks");
+    $("#ch5").text("The butt of the joke");
+    $("#Q4").text("5: In your friend group, who are you?");
+    $("#Q4").attr("id", "Q5");
+    $("button").on("click", scene6);
+}
+
+let scene6 = function() {
+    $("#ch1").text("Toe knife");
+    $("#ch2").text("Wolf hair");
+    $("#ch3").text("Sticky bible");
+    $("#ch4").text("Rated, excellent home videos");
+    $("#ch5").text("A cat");
+    $("#Q5").text("6: What is something someone would find in your room?");
+    $("#Q5").attr("id", "Q6");
+    $("button").on("click", scene7);
+}
+   
+let scene7 = function() {
+    $("#ch1").text("Making money");
+    $("#ch2").text("Ghouls");
+    $("#ch3").text("Hand to hand combat");
+    $("#ch4").text("Seducing others");
+    $("#ch5").text("Performing in front of a crowd");
+    $("#Q6").text("7: What interests you most?");
+    $("#Q6").attr("id", "Q7");
+    $("button").on("click", scene8);
+}
+
+let scene8 = function() {
+    $("#ch1").text("Getting high");
+    $("#ch2").text("Magnets");
+    $("#ch3").text("Working out");
+    $("#ch4").text("Making schemes");
+    $("#ch5").text("Telling jokes");
+    $("#Q7").text("8: Pick a hobby");
+    $("#Q7").attr("id", "Q8");
+    $("button").on("click", scene9);
+}
+
+let scene9 = function() {
+    $("#ch1").text("Rich");
+    $("#ch2").text("Charlie");
+    $("#ch3").text("Strong");
+    $("#ch4").text("Perfect");
+    $("#ch5").text("Funny");
+    $("#Q8").text("9: Pick 1 word to describe yourself");
+    $("#Q8").attr("id", "Q9");
+    $("button").on("click", scene10);
+}
+
+let scene10 = function() {
+    $("#ch1").text("Drop a magnum condom in front of them");
+    $("#ch2").text("Stalk them so they know I'm always protecting them");
+    $("#ch3").text("I would show off my muscles and do some karate");
+    $("#ch4").text("I have a perfect system for flirting with anyone, and it never fails");
+    $("#ch5").text("I can't talk to my crush, I get too nervous and gag");
+    $("#Q9").text("10: How would you flirt with your crush?");
+    $("#Q9").attr("id", "Q10");
+    $("button").on("click", sceneFinal);
+}
+
+
+let sceneFinal = function() {
+    $("#Q10").attr("id", "Final");
+    $("#Final").text("You Are:");
+    $("#question1").empty();
+    $("#philly").remove;
+     
+    
+let frank = $("<p>");
+frank.addClass("descriptionStyle");
+frank.text("You are confident and proud of yourself for all the slimy and illegal things you do. You have acquired a lot of money by any means possible, and love to tell everyone that you are rich. However, by the looks of you, no one would know you have money. If you were ever to go missing for a short amount of time, people would probably assume you are: at a strip club, are high somewhere, or you did something sketchy and are facing the consequences. Those consequences don't last long though, since you've got the money to get out of anything. You pride yourself on living like scum, since that saves you money and makes you appreciate life more. In your friend group you are the reliable money bag and are creative when it comes to eating your drinks. One request from all those around you, learn proper hygiene you bald bitch!");
+    
+let charlie = $("<p>");
+charlie.addClass("descriptionStyle");
+charlie.text("If you can read this I'm surprised! You are definitely not the smartest out of your friend group, but you are 100% hard to predict. Maybe from your lack of reading skills that makes it harder for others to read you. Aside from this, you are adventrous, weird, and probably a stalker. I'm sure the one you like will come around if you stop being a creep and treat them like a normal human being. However, you will probably keep up with your methods and just hope they notice how reliable you are. You have an interest in things that most don't, so people don't connect with you in that way. You are a lot of fun though, so people like to hang around just to laugh and or to do something stupid. Keep having fun in life and start trying new things!");
+    
+let mac = $("<p>");
+mac.addClass("descriptionStyle");
+mac.text("Congrats on finally being part of your true self, now you just need to realize that you are NOT the strong protective force you think you are. You are not as brave and adventurous as you pretend to be in your imagination. Instead, you are afraid of doing things that might result in slight injury, but love to tell people you could do something if some bullshit excuse was not present. It's okay to be scared of things, everybody has fears. Moving on, you are an on the go type of person and are always thinking of things to do. Your friends like this about you because you come with a plan of action and make things less boring. You are quick to anger, which is unflattering so you should try working on this. All in all, keep making up fun activities and be more honest about yourself.");    
+    
+let dennis = $("<p>");
+dennis.addClass("descriptionStyle");
+dennis.text("Wow! Should we all be scared that you got Dennis? I mean, somebody here needs an ego check! You are an egotistical person who believes they are a Golden God. You are too focused on what others will think and say to you, that you will do anything to assert some form of dominance over them. You try not to be seen as vulnerable, but you should open up more. Life will be more tolerable and enjoyable if you can be your true self and connect with others genuinely. You really enjoy feeling better than others that you limit your own possibilities. Try new things and eat new foods, your view on value is hurting you in the long run. In your friend group you are the best looking and the leader, which is not helping with your ego. If you truly are a Dennis, you are probably very mean. This is a bad thing, you can't be better than others if no one wants to be around you. ");    
+    
+let dee = $("<p>");
+dee.addClass("descriptionStyle");
+dee.text("Man do I feel a little bad about you getting this answer. You are the butt of every joke when you are hanging out with friends, or even around strangers. It's like everyone knows to make fun of you, and you don't even stand up for yourself. I will say, some of the insults you have to blame yourself for. You are not as funny as you like to believe you are, and please stop trying to perform in front of anyone you meet. You need to be humbled, but just don't seem to understand this. Like a lot of people tell you this and you just don't listen. With more practice I'm sure you will start getting better, but randomly performing to strangers and friends will not help you. Also, with more confidence you might get better. For some reason you love to perform, but get stage fright so easy. You even get too nervous to talk to anyone you like, so a confidence boost will help you in more ways than one. So, work on your confidence and tone down the performer in you.  ");   
+     
+    
+//if else statements    
+    if (total <= 7) {
+      //$("#question1").text("Frank Reynolds");
+    $("#Final")
+        .addClass("resultLine")
+        .text("You Are: Frank Reynolds");    
+    $("#question1").after(frank);
+        $("<img>")
+            .attr("src", "frank.jpeg")
+            .addClass("frankPic")
+            .width(500)
+            .appendTo("#question1");
+  } else if (total <= 15) {
+      //$("#question1").text("Charlie");
+      $("#Final")
+          .addClass("resultLine")
+          .text("You Are: Charlie Kelly");
+      $("#question1").after(charlie);
+        $("<img>")
+            .attr("src", "charlie.webp")
+            .addClass("frankPic")
+            .width(500)
+            .appendTo("#question1");
+  } else if (total <=23) {
+      //$("#question1").text("Mac");
+      $("#Final")
+          .addClass("resultLine")
+          .text("You Are: Mac, aka Ronald McDonald");
+      $("#question1").after(mac);
+        $("<img>")
+            .attr("src", "mac.webp")
+            .addClass("frankPic")
+            .width(500)
+            .appendTo("#question1");
+  } else if (total <=31) {
+      //$("#question1").text("Dennis");
+      $("#Final")
+          .addClass("resultLine")
+          .text("You Are: Dennis Reynolds"); 
+      $("#question1").after(dennis);
+        $("<img>")
+            .attr("src", "dennis.webp")
+            .addClass("frankPic")
+            .width(500)
+            .appendTo("#question1");
+  } else {
+      //$("#question1").text("Dee");
+      $("#Final")
+          .addClass("resultLine")
+          .text("You Are: Dee Reynolds"); 
+      $("#question1").after(dee);
+        $("<img>")
+            .attr("src", "dee.webp")
+            .addClass("frankPic")
+            .width(500)
+            .appendTo("#question1");
+  }
+}
+
+
+
+$("button").on("click", scene2);
+    
+//buttons have these values    
+$("#ch1").on("click", function() {
+    total += 0;
+})
+$("#ch2").on("click", function() {
+    total += 1;
+}) 
+$("#ch3").on("click", function() {
+    total += 2;
+}) 
+$("#ch4").on("click", function() {
+    total += 3;
+})     
+$("#ch5").on("click", function() {
+    total += 4;
+}) 
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+ </div>
+</body>
+
+
+
+
+
+</html>
